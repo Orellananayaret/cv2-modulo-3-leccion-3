@@ -1,0 +1,271 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: rgb(15, 23, 41);
+  color: rgb(248, 250, 252);
+  line-height: 1.6;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.boton {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  border-radius: 18px;
+  text-decoration: none;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.boton--primario {
+  background: rgb(139, 92, 246);
+  color: white;
+}
+.boton--primario:hover {
+  transform: translateY(-3px);
+}
+.boton--secundario {
+  border: 1px solid rgb(34, 211, 238);
+}
+.boton--secundario:hover {
+  background: rgb(34, 211, 238);
+  color: rgb(15, 23, 41);
+}
+
+.nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(30, 41, 59);
+}
+.nav__logo {
+  color: rgb(34, 211, 238);
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+.nav__menu {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+.nav__enlace {
+  color: rgb(248, 250, 252);
+  text-decoration: none;
+}
+.nav__enlace:hover {
+  color: rgb(139, 92, 246);
+}
+
+section {
+  width: 100%;
+}
+
+.features,
+.precios,
+.opiniones,
+.estadisticas,
+.cta {
+  margin-bottom: 4rem;
+}
+
+.hero {
+  min-height: 80vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 4rem 0;
+  gap: 2rem;
+  width: 100%;
+  margin-bottom: 4rem;
+}
+.hero__contenido {
+  max-width: 600px;
+}
+.hero__badge {
+  color: rgb(34, 211, 238);
+}
+.hero__titulo {
+  font-size: 3rem;
+  margin: 1rem 0;
+}
+.hero__subtitulo {
+  color: rgb(148, 163, 184);
+  margin-bottom: 2rem;
+}
+.hero__acciones {
+  display: flex;
+  gap: 1rem;
+}
+.hero__nota {
+  margin-top: 1rem;
+  color: rgb(148, 163, 184);
+}
+.hero__visual {
+  height: 300px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgb(139, 92, 246), rgb(34, 211, 238));
+}
+
+.features {
+  padding: 4rem 0;
+}
+.features__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.features__titulo {
+  font-size: 2.5rem;
+}
+.features__subtitulo {
+  color: rgb(148, 163, 184);
+}
+
+.feature {
+  background: rgb(30, 41, 59);
+  padding: 4rem 0;
+  border-radius: 18px;
+  transition: 0.3s;
+}
+.feature:hover {
+  transform: translateY(-8px);
+}
+.feature__icono {
+  font-size: 2rem;
+  color: rgb(34, 211, 238);
+}
+.feature__titulo {
+  margin: 1rem 0;
+}
+.feature__texto {
+  color: rgb(148, 163, 184);
+}
+
+.precios {
+  padding: 4rem 0;
+}
+.precios__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.plan {
+  background: rgb(30, 41, 59);
+  padding: 4rem 0;
+  border-radius: 18px;
+  position: relative;
+}
+.plan__precio {
+  font-size: 2rem;
+}
+.plan__lista {
+  list-style: none;
+  margin: 1rem 0;
+}
+.plan--destacado {
+  border: 2px solid rgb(139, 92, 246);
+  transform: scale(1.05);
+}
+.plan__etiqueta {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: rgb(34, 211, 238);
+}
+
+.opiniones {
+  padding: 4rem 0;
+}
+.opiniones__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.testimonio {
+  background-color: rgb(30, 41, 59);
+  padding: 4rem 0;
+  border-radius: 18px;
+}
+.testimonio__autor {
+  color: rgb(34, 211, 238);
+  margin-top: 1rem;
+}
+
+.cta {
+  padding: 4rem 0;
+  text-align: center;
+  background: rgb(30, 41, 59);
+}
+.cta__titulo {
+  font-size: 2.5rem;
+}
+
+.estadisticas {
+  padding: 4rem 0;
+}
+.estadisticas__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.estadistica {
+  background: rgb(30, 41, 59);
+  padding: 2rem;
+  border-radius: 18px;
+  text-align: center;
+}
+.estadistica__numero {
+  font-size: 3rem;
+  color: rgb(34, 211, 238);
+}
+
+.footer {
+  padding: 3rem 5%;
+  background: rgb(2, 6, 23);
+}
+.footer__cols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+.footer__enlace {
+  display: block;
+  color: rgb(148, 163, 184);
+  text-decoration: none;
+}
+.footer__copy {
+  margin-top: 2rem;
+  text-align: center;
+  color: rgb(148, 163, 184);
+}
+
+@media (max-width: 900px) {
+  .hero,
+  .features__grid,
+  .precios__grid,
+  .opiniones__grid,
+  .estadisticas__grid {
+    grid-template-columns: 1fr;
+  }
+  .nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+/*# sourceMappingURL=estilo.map */

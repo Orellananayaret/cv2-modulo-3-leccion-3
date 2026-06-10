@@ -1,0 +1,399 @@
+// variables
+
+$color-bg: rgb(15, 23, 41);
+$color-card: rgb(30, 41, 59);
+$color-primary: rgb(139, 92, 246);
+$color-secondary: rgb(34, 211, 238);
+$color-text: rgb(248, 250, 252);
+$color-muted: rgb(148, 163, 184);
+
+$font-main: "Segoe UI", sans-serif;
+
+$space: 1rem;
+$radius: 18px;
+
+
+// RESET
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+
+body {
+    font-family: $font-main;
+    background-color: $color-bg;
+    color: $color-text;
+    line-height: 1.6;
+}
+
+
+
+
+
+// main
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+// botones
+
+.boton {
+    display: inline-block;
+    padding: .8rem 1.5rem;
+    border-radius: $radius;
+    text-decoration: none;
+    transition: .3s;
+    cursor: pointer;
+
+    &--primario {
+        background: $color-primary;
+        color: white;
+
+    &:hover {
+        transform: translateY(-3px);
+    }
+    }
+
+    &--secundario{
+        border: 1px solid $color-secondary;
+
+    &:hover {
+        background: $color-secondary;
+        color: $color-bg;
+
+    } 
+
+    }
+
+}
+
+
+// nav
+
+.nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: $space 5%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: $color-card;
+
+
+&__logo {
+    color: $color-secondary;
+    font-size: 1.5rem;
+    font-weight:bold;
+    text-decoration: none;
+}
+
+&__menu {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+&__enlace {
+    color: $color-text;
+    text-decoration: none;
+
+
+    &:hover {
+        color: $color-primary;
+    }
+}
+
+}
+
+
+section {
+    width: 100%;
+}
+
+.features,
+.precios,
+.opiniones,
+.estadisticas,
+.cta {
+    margin-bottom: 4rem;
+}
+
+// hero
+
+
+.hero {
+    min-height: 80vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 4rem 0;
+    gap: 2rem;
+   
+    width: 100%;
+    margin-bottom: 4rem;
+
+
+
+    &__contenido {
+        max-width: 600px;
+    }
+
+
+    &__badge {
+    color: $color-secondary;
+}
+
+    &__titulo {
+        font-size: 3rem;
+        margin: 1rem 0;
+    }
+
+    &__subtitulo {
+        color: $color-muted;
+        margin-bottom: 2rem;
+    }
+
+    &__acciones {
+        display: flex;
+        gap: 1rem;
+    }
+
+    &__nota {
+        margin-top: 1rem;
+        color: $color-muted;
+    }
+
+    &__visual {
+        height: 341px;
+        border-radius: $radius;
+        
+    }
+
+    &__visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: $radius;
+    }
+}
+
+
+
+// feature
+.features {
+
+   padding: 4rem 0;
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    &__titulo {
+        font-size: 2.5rem;
+    }
+
+    &__subtitulo {
+        color: $color-muted;
+    }
+}
+
+.feature {
+    background: $color-card;
+    padding: 2rem;
+    border-radius: $radius;
+    transition: .3s;
+
+
+    &:hover {
+        transform: translateY(-8px);
+    }
+
+
+    &__icono {
+        font-size: 2rem;
+        color: $color-secondary;
+    }
+
+
+    &__titulo {
+        margin: 1rem 0;
+    }
+
+    &__texto {
+        color: $color-muted;
+    }
+}
+
+// precios 
+
+.precios {
+   padding: 4rem 0;
+
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 2rem;
+    }
+}
+
+.plan {
+    background: $color-card;
+    padding: 2rem;
+    border-radius: $radius;
+    position: relative;
+
+
+    &__precio {
+        font-size: 2rem;
+    }
+
+
+    &__lista {
+        list-style: none;
+        margin: 1rem 0;
+    }
+
+    &--destacado {
+        border: 2px solid $color-primary;
+        transform: scale(1.05);
+    }
+
+    &__etiqueta {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        color: $color-secondary;
+    }
+}
+
+
+
+// opiniones 
+
+.opiniones {
+    padding: 4rem 0;
+
+
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 2rem;
+    }
+}
+
+.testimonio {
+    background-color: $color-card;
+    padding: 2rem;
+    border-radius: $radius;
+
+    &__autor {
+        color: $color-secondary;
+        margin-top: 1rem;
+    }
+}
+
+
+// cta 
+
+
+.cta {
+    padding: 4rem 0;
+    text-align: center;
+    background: $color-card;
+
+    &__titulo {
+        font-size: 2.5rem;
+    }
+}
+
+// estadisticas 
+
+.estadisticas {
+   padding: 2rem;
+
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 2rem;
+    }
+}
+
+.estadistica {
+    background: $color-card;
+    padding: 2rem;
+    border-radius: $radius;
+    text-align: center;
+
+
+    &__numero {
+        font-size: 3rem;
+        color: $color-secondary;
+    }
+}
+
+
+
+// footer 
+
+.footer {
+    padding: 3rem 5%;
+    background: rgb(2, 6, 23);
+
+
+    &__cols {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+    }
+
+    &__enlace {
+        display: block;
+        color: $color-muted;
+        text-decoration: none;
+    }
+
+
+    &__copy {
+        margin-top: 2rem;
+        text-align: center;
+        color: $color-muted;
+    }
+}
+
+
+// responsive 
+
+@media(max-width:900px){
+    .hero,
+    .features__grid,
+    .precios__grid,
+    .opiniones__grid, 
+    .estadisticas__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+
+
+
